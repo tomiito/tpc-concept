@@ -1,3 +1,4 @@
+@import "sizes";
 // ** This is where you can put your very own put Sass Mixins that can be used globally. **
 
 //  Mixin: circle ($width:50%, $height:50%)
@@ -9,3 +10,15 @@
   height: $height;
   border-radius: 50%;
 }
+
+@mixin grid ($rows:1fr 1fr, $columns:1fr 1fr 1fr) {
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  @media (max-width: $mobile-device-max){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+

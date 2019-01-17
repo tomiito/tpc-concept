@@ -1,0 +1,68 @@
+// ** This is where you define styles that are used globally across the entire app ** //
+$size-xs: 1px;
+$size-sm: 3px;
+$size-md: 5px;
+$size-lg: 10px;
+$size-xlg: 20px;
+$size-xxlg: 40px;
+$size-xxxlg: 70px;
+
+$max-page-size: 1200px;
+
+$mobile-device-max: 767px;
+$tablet-device-min: 768px;
+$tablet-device-max: 1024px;
+$desktop-device-min: 1024px;
+$desktop-device-max: 1281px;
+$monitors-device-min: 1281px;
+
+  // PADDING
+.p-t-xs {
+  padding-top: $size-xs;
+}
+.p-t-sm {
+  padding-top: $size-sm;
+}
+.p-t-md {
+  padding-top: $size-md;
+}
+.p-t-lg {
+  padding-top: $size-lg;
+}
+.p-t-xlg {
+  padding-top: $size-xlg;
+}
+.p-t-xxlg {
+  padding-top: $size-xxlg;
+}
+.p-t-xxxlg {
+  padding-top: $size-xxxlg;
+}
+
+// MARGIN
+.m-b-xs {
+  margin-bottom: $size-xs;
+}
+.m-b-sm {
+  margin-bottom: $size-sm;
+}
+.m-b-md {
+  margin-bottom: $size-md;
+}
+.m-b-lg {
+  margin-bottom: $size-lg;
+}
+.m-b-xlg {
+  margin-bottom: $size-xlg;
+}
+.m-b-xxlg {
+  margin-bottom: $size-xxlg;
+}
+.m-b-xxxlg {
+  margin-bottom: $size-xxxlg;
+}
+
+// MAX-PAGE-CONTAINER
+.container {
+  max-width: $max-page-size;
+}

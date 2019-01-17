@@ -1,9 +1,30 @@
-<div class="todo-page" ng-controller="ToDoCtrl as todo" layout-margin>
-  <h3 class="md-headline">To-Do</h3>
-  <md-list>
-    <md-list-item ng-repeat="item in todo.toDoItems">
-      <md-checkbox ng-model="item.completed" aria-label="Checkbox"></md-checkbox>
-      {{ item.title }}
-    </md-list-item>
-  </md-list>
+<div class="todo-page" ng-controller="ToDoCtrl as todo" >
+
+
+  <div class="section section-grey featured-courses p-t-xxlg">
+    <div class="section__header m-b-xxlg">
+      <h2>Featured Courses</h2>
+      <div class="section-title-indicator"></div>
+    </div>
+    <div class="section__body m-b-xxlg">
+      <div class="container">
+        <div class="course-grid">
+          <course-card></course-card>
+          <course-card></course-card>
+          <course-card></course-card>
+          <course-card></course-card>
+          <course-card></course-card>
+          <course-card></course-card>
+        </div>
+      </div>
+    </div>
+    <div class="section__footer m-b-xxxlg">
+        <md-button class="md-raised btn-alternative">
+          Browse all courses
+        </md-button>
+    </div>
+  </div>
+
+
+
 </div>

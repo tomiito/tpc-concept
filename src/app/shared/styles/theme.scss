@@ -1,0 +1,26 @@
+@import "color-palette";
+
+$app-primary-blue: $blue-grey500;
+
+$app-background-black: black;
+$app-background-grey: $grey200;
+$app-background-dark-grey: $grey800;
+$app-background-white: white;
+
+// FONTS
+$font-primary-color: black;
+$font-secondary-color: white;
+$font-hover-color: $app-primary-blue;
+
+// BUTTONS
+$button-primary-font-color: $font-secondary-color;
+$button-primary-background-color: $app-primary-blue;
+$button-primary-border-color: $app-primary-blue;
+
+$button-secondary-font-color: $font-primary-color;
+$button-secondary-background-color: white;
+$button-secondary-border-color: $app-primary-blue;
+
+$button-alternative-font-color: $font-primary-color;
+$button-alternative-background-color: transparent;
+$button-alternative-border-color: $app-background-dark-grey;

@@ -1,1 +1,30 @@
+@import "color-palette";
+@import "theme";
+
 // ** This is where you can override the default Angular Material styles **
+md-toolbar:not(.md-menu-toolbar) {
+  color: $font-secondary-color;
+  background-color: $app-background-black;
+}
+
+
+button {
+  text-transform: uppercase;
+}
+.md-button.md-raised.btn-primary, .md-button.md-raised.btn-primary:hover {
+  color: $button-primary-font-color;
+  background-color: $button-primary-background-color;
+  border: 2px solid $button-primary-border-color;
+}
+
+.md-button.md-raised.btn-secondary, .md-button.md-raised.btn-secondary:hover {
+  color: $button-secondary-font-color;
+  background-color: $button-secondary-background-color;
+  border: 2px solid $button-secondary-border-color;
+}
+
+.md-button.md-raised.btn-alternative, .md-button.md-raised.btn-alternative:hover {
+  color: $button-alternative-font-color;
+  background-color: $button-alternative-background-color;
+  border: 2px solid $button-alternative-border-color;
+}

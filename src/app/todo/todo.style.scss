@@ -1,7 +1,13 @@
+@import "../shared/main";
+
 .todo-page {
 
   // Fixes issue with to-do items not aligned correctly on small screens
   md-checkbox {
     max-width: 20px;
+  }
+
+  .course-grid {
+    @include grid();
   }
 }
