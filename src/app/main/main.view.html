@@ -1,5 +1,14 @@
 <div class="main-page" ng-controller="MainCtrl as ctrl" >
 
+  <div class="section featured-courses p-t-xxlg">
+    <div class="section__body m-b-xxlg">
+      <div class="container">
+        <div class="main-grid">
+          <main-card ng-repeat="mData in ctrl.main" item="mData"></main-card>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="section section-grey featured-courses p-t-xxlg">
     <div class="section__header m-b-xxlg">

@@ -85,10 +85,12 @@ angular.module('app.layout', [
 
 angular.module('main.controllers.MainCtrl', [])
   .controller('MainCtrl', ["SampleDataService", function(SampleDataService) {
+    var main = SampleDataService.getSampleMain;
     var data = SampleDataService.getSampleCourses;
     var news = SampleDataService.getSampleNews;
 
     return {
+      main: main,
       data: data,
       news: news
     }
@@ -124,6 +126,7 @@ angular.module('main.services.MainService', [])
 angular.module('app.shared', [
   'shared.directives.backButton',
   'shared.directives.courseCard',
+  'shared.directives.mainCard',
   'shared.directives.newsCard',
   'shared.services.sampleData',
   'shared.services.Utils'
@@ -232,6 +235,29 @@ angular.module('shared.services.Utils', [])
 angular.module('shared.services.sampleData', [])
   .factory('SampleDataService', function SampleDataService() {
 
+    var sampleMain = [{
+      title: 'Become a PHP Master and Make Money Fast',
+      pictureUrl: '/assets/images/demo-course-1.jpg'
+    },
+      {
+        title: 'Why I Use Both WebStorm and Sublime Text',
+        pictureUrl: '/assets/images/demo-course-2.jpg'
+      },
+      {
+        title: 'Mastering Refactoring',
+        pictureUrl: '/assets/images/demo-course-3.jpg'
+      },
+      {
+        title: 'The future of Web Design',
+        pictureUrl: '/assets/images/demo-course-5.jpg'
+      },
+      {
+        title: 'Tips for being better Musician',
+        pictureUrl: '/assets/images/demo-course-6.jpg'
+      }
+    ];
+
+
     var sampleData = [{
       title: 'Become a PHP Master and Make Money Fast',
       pictureUrl: '/assets/images/demo-course-1.jpg',
@@ -279,6 +305,7 @@ angular.module('shared.services.sampleData', [])
     ];
 
     var service = {
+      getSampleMain: sampleMain,
       getSampleCourses: sampleData,
       getSampleNews: sampleNews
     };
@@ -293,6 +320,20 @@ angular.module('shared.directives.courseCard', [])
         course: '='
       },
       templateUrl: 'shared/directives/course-card/course-card.view.html',
+      link: function (scope, elem) {
+        console.log(scope.course);
+      }
+    };
+  }]);
+
+angular.module('shared.directives.mainCard', [])
+  .directive('mainCard', ['$window', function($window) {
+    return {
+      restrict: 'E',
+      scope: {
+        item: '='
+      },
+      templateUrl: 'shared/directives/main-card/main-card.view.html',
       link: function (scope, elem) {
         console.log(scope.course);
       }

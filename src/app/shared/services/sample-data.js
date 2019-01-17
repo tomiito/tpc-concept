@@ -1,6 +1,29 @@
 angular.module('shared.services.sampleData', [])
   .factory('SampleDataService', function SampleDataService() {
 
+    var sampleMain = [{
+      title: 'Become a PHP Master and Make Money Fast',
+      pictureUrl: '/assets/images/demo-course-1.jpg'
+    },
+      {
+        title: 'Why I Use Both WebStorm and Sublime Text',
+        pictureUrl: '/assets/images/demo-course-2.jpg'
+      },
+      {
+        title: 'Mastering Refactoring',
+        pictureUrl: '/assets/images/demo-course-3.jpg'
+      },
+      {
+        title: 'The future of Web Design',
+        pictureUrl: '/assets/images/demo-course-5.jpg'
+      },
+      {
+        title: 'Tips for being better Musician',
+        pictureUrl: '/assets/images/demo-course-6.jpg'
+      }
+    ];
+
+
     var sampleData = [{
       title: 'Become a PHP Master and Make Money Fast',
       pictureUrl: '/assets/images/demo-course-1.jpg',
@@ -48,6 +71,7 @@ angular.module('shared.services.sampleData', [])
     ];
 
     var service = {
+      getSampleMain: sampleMain,
       getSampleCourses: sampleData,
       getSampleNews: sampleNews
     };
