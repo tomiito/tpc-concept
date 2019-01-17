@@ -86,9 +86,11 @@ angular.module('app.layout', [
 angular.module('main.controllers.MainCtrl', [])
   .controller('MainCtrl', ["SampleDataService", function(SampleDataService) {
     var data = SampleDataService.getSampleCourses;
+    var news = SampleDataService.getSampleNews;
 
     return {
-      data: data
+      data: data,
+      news: news
     }
   }]);
 
@@ -122,6 +124,7 @@ angular.module('main.services.MainService', [])
 angular.module('app.shared', [
   'shared.directives.backButton',
   'shared.directives.courseCard',
+  'shared.directives.newsCard',
   'shared.services.sampleData',
   'shared.services.Utils'
 ]);
@@ -261,8 +264,23 @@ angular.module('shared.services.sampleData', [])
       }
     ];
 
+    var sampleNews = [{
+      title: 'Become a PHP Master and Make Money Fast',
+      pictureUrl: '/assets/images/demo-course-1.jpg'
+    },
+      {
+        title: 'Why I Use Both WebStorm and Sublime Text',
+        pictureUrl: '/assets/images/demo-course-2.jpg'
+      },
+      {
+        title: 'Mastering Refactoring',
+        pictureUrl: '/assets/images/demo-course-3.jpg'
+      }
+    ];
+
     var service = {
-      getSampleCourses: sampleData
+      getSampleCourses: sampleData,
+      getSampleNews: sampleNews
     };
     return service;
   });
@@ -277,9 +295,25 @@ angular.module('shared.directives.courseCard', [])
       templateUrl: 'shared/directives/course-card/course-card.view.html',
       link: function (scope, elem) {
         console.log(scope.course);
-        elem.bind('click', function () {
-          $window.history.back();
-        });
+      }
+    };
+  }]);
+
+angular.module('shared.directives.newsCard', [])
+  .directive('newsCard', ['$window', function($window) {
+    return {
+      restrict: 'E',
+      scope: {
+        news: '='
+      },
+      templateUrl: 'shared/directives/news-card/news-card.view.html',
+      link: function (scope, elem) {
+        console.log(scope.news);
+
+        scope.doNothing = function(){
+
+        };
+
       }
     };
   }]);

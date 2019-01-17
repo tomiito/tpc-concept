@@ -28,9 +28,7 @@
     <div class="section__body m-b-xxlg">
       <div class="container">
         <div class="news-grid">
-          <course-card></course-card>
-          <course-card></course-card>
-          <course-card></course-card>
+          <news-card ng-repeat="news in ctrl.news" news="news"></news-card>
         </div>
       </div>
     </div>

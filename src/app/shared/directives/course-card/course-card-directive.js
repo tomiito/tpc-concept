@@ -8,9 +8,6 @@ angular.module('shared.directives.courseCard', [])
       templateUrl: 'shared/directives/course-card/course-card.view.html',
       link: function (scope, elem) {
         console.log(scope.course);
-        elem.bind('click', function () {
-          $window.history.back();
-        });
       }
     };
   }]);

@@ -33,8 +33,23 @@ angular.module('shared.services.sampleData', [])
       }
     ];
 
+    var sampleNews = [{
+      title: 'Become a PHP Master and Make Money Fast',
+      pictureUrl: '/assets/images/demo-course-1.jpg'
+    },
+      {
+        title: 'Why I Use Both WebStorm and Sublime Text',
+        pictureUrl: '/assets/images/demo-course-2.jpg'
+      },
+      {
+        title: 'Mastering Refactoring',
+        pictureUrl: '/assets/images/demo-course-3.jpg'
+      }
+    ];
+
     var service = {
-      getSampleCourses: sampleData
+      getSampleCourses: sampleData,
+      getSampleNews: sampleNews
     };
     return service;
   });
