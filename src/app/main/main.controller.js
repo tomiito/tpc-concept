@@ -1,7 +1,6 @@
 angular.module('main.controllers.MainCtrl', [])
-  .controller('MainCtrl', function(MainService, SampleDataService) {
-    var vm = this;
-    var data = SampleDataService.getSampleData();
+  .controller('MainCtrl', function(SampleDataService) {
+    var data = SampleDataService.getSampleCourses;
 
     return {
       data: data

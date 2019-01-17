@@ -9,12 +9,7 @@
     <div class="section__body m-b-xxlg">
       <div class="container">
         <div class="course-grid">
-          <course-card></course-card>
-          <course-card></course-card>
-          <course-card></course-card>
-          <course-card></course-card>
-          <course-card></course-card>
-          <course-card></course-card>
+          <course-card ng-repeat="course in ctrl.data" course="course"></course-card>
         </div>
       </div>
     </div>
