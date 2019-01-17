@@ -43,7 +43,7 @@ module.exports = {
   },
   serve: {
     baseDir : isProduction ? 'production' : 'docs',
-    port : isProduction ? 4000 : 3000
+    port : isProduction ? 4000 : 3001
   },
   coverage: {
     destinationFolder: 'reports/coverage/lcov-report',
