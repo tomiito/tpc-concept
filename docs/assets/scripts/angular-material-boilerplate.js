@@ -32,7 +32,7 @@ angular.module('angular-material-boilerplate', [
   // Components
   'app.toolbar',
   'app.sidenav',
-  'app.todo',
+  'app.main',
   'app.about'
 ])
 
@@ -45,7 +45,7 @@ angular.module('angular-material-boilerplate', [
 }])
 
 .run(['$state', function ($state) {
-  $state.go('todo');
+  $state.go('main');
 }]);
 
 angular.module('about.controllers.AboutCtrl', [])
@@ -82,6 +82,39 @@ angular.module('app.layout', [
     templateUrl: 'layout/layout.view.html'
   });
 }]);
+
+angular.module('main.controllers.MainCtrl', [])
+  .controller('MainCtrl', ["MainService", function(MainService) {
+    var vm = this;
+
+  }]);
+
+angular.module('app.main', [
+  'ui.router',
+  'main.controllers.MainCtrl',
+  'main.services.MainService'
+])
+
+.config(["$stateProvider", function config($stateProvider) {
+  $stateProvider.state('main', {
+    url: '/main',
+    templateUrl: 'main/main.view.html'
+  });
+}]);
+
+angular.module('main.services.MainService', [])
+  .factory('MainService', function() {
+
+    var toDoItems = [
+
+    ];
+
+    var service = {
+      getItems: toDoItems
+    };
+    return service;
+
+  });
 
 angular.module('app.shared', [
   'shared.directives.backButton',
@@ -144,55 +177,6 @@ angular.module('toolbar.controllers.ToolbarCtrl', [])
 angular.module('app.toolbar', [
   'toolbar.controllers.ToolbarCtrl'
 ]);
-
-angular.module('todo.controllers.ToDoCtrl', [])
-  .controller('ToDoCtrl', ["ToDo", function(ToDo) {
-    var vm = this;
-    vm.toDoItems = ToDo.getItems;
-
-  }]);
-
-angular.module('app.todo', [
-  'ui.router',
-  'todo.controllers.ToDoCtrl',
-  'todo.services.ToDo'
-])
-
-.config(["$stateProvider", function config($stateProvider) {
-  $stateProvider.state('todo', {
-    url: '/todo',
-    templateUrl: 'todo/todo.view.html'
-  });
-}]);
-
-angular.module('todo.services.ToDo', [])
-  .factory('ToDo', function() {
-
-    var toDoItems = [
-      {
-        title:  'Make a todo list',
-        completed: true
-      },
-      {
-        title:  'Check off first item on todo list',
-        completed: true
-      },
-      {
-        title:  'Realise you\'ve have already accomplished two things on the list',
-        completed: true
-      },
-      {
-        title:  'Reward yourself with a nice long nap',
-        completed: false
-      }
-    ];
-
-    var service = {
-      getItems: toDoItems
-    };
-    return service;
-
-  });
 
 angular.module('shared.directives.backButton', [])
   .directive('backButton', ['$window', function($window) {

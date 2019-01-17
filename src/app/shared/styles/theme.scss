@@ -1,16 +1,20 @@
 @import "color-palette";
 
 $app-primary-blue: $blue-grey500;
+$app-primary-grey: $grey200;
+$app-primary-dark-grey: $grey800;
 
 $app-background-black: black;
-$app-background-grey: $grey200;
-$app-background-dark-grey: $grey800;
+$app-background-grey: $app-primary-grey;
+$app-background-dark-grey: $app-primary-dark-grey;
 $app-background-white: white;
 
 // FONTS
 $font-primary-color: black;
 $font-secondary-color: white;
 $font-hover-color: $app-primary-blue;
+$font-disabled-color: $app-primary-grey;
+$font-gold-color: gold;
 
 // BUTTONS
 $button-primary-font-color: $font-secondary-color;

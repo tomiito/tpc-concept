@@ -28,3 +28,16 @@ button {
   background-color: $button-alternative-background-color;
   border: 2px solid $button-alternative-border-color;
 }
+
+hr {
+  border-top: 1px solid $app-background-dark-grey;
+  height: 0;
+  width: 100%;
+}
+
+.review-stars {
+  -webkit-text-fill-color: $font-disabled-color;
+}
+.review-stars.gold {
+  -webkit-text-fill-color: $font-gold-color;
+}

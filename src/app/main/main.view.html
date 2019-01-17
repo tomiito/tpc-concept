@@ -1,9 +1,9 @@
-<div class="todo-page" ng-controller="ToDoCtrl as todo" >
+<div class="main-page" ng-controller="MainCtrl as ctrl" >
 
 
   <div class="section section-grey featured-courses p-t-xxlg">
     <div class="section__header m-b-xxlg">
-      <h2>Featured Courses</h2>
+      <h2 class="m-b-xlg">Featured Courses</h2>
       <div class="section-title-indicator"></div>
     </div>
     <div class="section__body m-b-xxlg">
@@ -22,6 +22,27 @@
         <md-button class="md-raised btn-alternative">
           Browse all courses
         </md-button>
+    </div>
+  </div>
+
+  <div class="section featured-news p-t-xxlg">
+    <div class="section__header m-b-xxlg">
+      <h2 class="m-b-xlg">Latest News</h2>
+      <div class="section-title-indicator"></div>
+    </div>
+    <div class="section__body m-b-xxlg">
+      <div class="container">
+        <div class="news-grid">
+          <course-card></course-card>
+          <course-card></course-card>
+          <course-card></course-card>
+        </div>
+      </div>
+    </div>
+    <div class="section__footer m-b-xxxlg">
+      <md-button class="md-raised btn-alternative">
+        Browse all news
+      </md-button>
     </div>
   </div>
 

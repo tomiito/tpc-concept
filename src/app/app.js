@@ -27,7 +27,7 @@ angular.module('angular-material-boilerplate', [
   // Components
   'app.toolbar',
   'app.sidenav',
-  'app.todo',
+  'app.main',
   'app.about'
 ])
 
@@ -40,5 +40,5 @@ angular.module('angular-material-boilerplate', [
 })
 
 .run(['$state', function ($state) {
-  $state.go('todo');
+  $state.go('main');
 }]);

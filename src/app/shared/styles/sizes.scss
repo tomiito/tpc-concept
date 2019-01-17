@@ -39,6 +39,50 @@ $monitors-device-min: 1281px;
   padding-top: $size-xxxlg;
 }
 
+.p-l-xs {
+  padding-left: $size-xs;
+}
+.p-l-sm {
+  padding-left: $size-sm;
+}
+.p-l-md {
+  padding-left: $size-md;
+}
+.p-l-lg {
+  padding-left: $size-lg;
+}
+.p-l-xlg {
+  padding-left: $size-xlg;
+}
+.p-l-xxlg {
+  padding-left: $size-xxlg;
+}
+.p-l-xxxlg {
+  padding-left: $size-xxxlg;
+}
+
+.p-r-xs {
+  padding-right: $size-xs;
+}
+.p-r-sm {
+  padding-right: $size-sm;
+}
+.p-r-md {
+  padding-right: $size-md;
+}
+.p-r-lg {
+  padding-right: $size-lg;
+}
+.p-r-xlg {
+  padding-right: $size-xlg;
+}
+.p-r-xxlg {
+  padding-right: $size-xxlg;
+}
+.p-r-xxxlg {
+  padding-right: $size-xxxlg;
+}
+
 // MARGIN
 .m-b-xs {
   margin-bottom: $size-xs;

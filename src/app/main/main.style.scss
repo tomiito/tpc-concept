@@ -1,6 +1,6 @@
 @import "../shared/main";
 
-.todo-page {
+.main-page {
 
   // Fixes issue with to-do items not aligned correctly on small screens
   md-checkbox {
@@ -9,5 +9,8 @@
 
   .course-grid {
     @include grid();
+  }
+  .news-grid {
+    @include grid(1fr, 1fr 1fr 1fr);
   }
 }
